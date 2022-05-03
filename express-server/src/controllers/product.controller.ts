@@ -67,7 +67,7 @@ export class ProductController extends Controller {
                 return res.status(500).json({message: "Can't insert required part or required product relation in the database!"});
             }
 
-            res.status(201).json({message: `New product has been inserted with name: ${simpleProduct.name}!`});
+            res.status(201).json(prodResult);
         } catch(err) {
             res.status(500).json({message: err.message});
             console.log(err);

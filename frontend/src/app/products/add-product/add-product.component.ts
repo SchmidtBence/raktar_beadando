@@ -124,6 +124,8 @@ export class AddProductComponent implements OnInit {
         this.addedParts = [];
         this.addedProds = [];
 
+        this.products.push(insertedProd);
+
         alert("Sikeres termék felvitel történt!");
 
         return;
