@@ -23,6 +23,7 @@ export class Order {
     orderDate: Date;
 
     @ManyToOne(type => Product, product => product.orders, {
+        onDelete: "CASCADE",
         eager: true
     })
     product: Product;
